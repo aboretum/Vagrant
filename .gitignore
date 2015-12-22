@@ -1,0 +1,6 @@
+# Vagrant temp files
+.vagrant
+Install-*
+# Provisioning
+vagrant/**
+!vagrant/*.sh
