@@ -9,6 +9,7 @@ export MYSQL_SERVER_ROOT_PASS="root"
 export INSTALL_PREFIX="/home/vagrant"
 export VAGRANT_VM_CORES=`nproc`
 export CORES_FOR_MAKE=`echo "$VAGRANT_VM_CORES * 3 / 2" |bc`
+export SYSTEM_TIMEZONE="Europe/Paris"
 export CORE_DIRECTORY="/vagrant/emulator"
 export DATABASE_DIRECTORY="/vagrant/database"
 export VAGRANT_SCRIPTS_DIR="/vagrant"

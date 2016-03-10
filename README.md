@@ -6,6 +6,7 @@ https://github.com/NostalriusTBC/
 ## How to
 ### 1. Requirements
 Download vagrant (https://www.vagrantup.com/) and VirtualBox (https://www.virtualbox.org/).
+Note: Make sure to use UNIX-style line endings within git (especially on Windows). Otherwise the shell scripts used for server setup won't be executable.
 
 ### 2. Provisioning
 Run the following command to create and configure a virtual machine within VirtualBox.
@@ -18,7 +19,7 @@ vagrant up
 ```
 
 ### 3. Data files (DBCs, maps, vmaps, mmaps ...)
-You need to create a new directory ``vagrant/data`` and copy all your data files inside.
+You need to create a new directory ``vagrant/data`` and copy all your data files inside. Needed extractors can be found within the Core-Repository.
 You should have the following directories created:
 
 ```
