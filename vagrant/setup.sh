@@ -1,6 +1,14 @@
 #!/bin/sh
+# I. setup proxy for APT
+cd /vagrant
+. ./config_import.sh
+echo "Acquire::http::Proxy \"$HTTP_PROXY\";" > /etc/apt/apt.conf
+
+# II. Create users, get packages ...
 chmod +x /vagrant/setup_root.sh
 sudo /vagrant/setup_root.sh
+
+# III. Setup server
 chmod +x /vagrant/setup_user.sh
 sudo -u vagrant /vagrant/setup_user.sh
 
