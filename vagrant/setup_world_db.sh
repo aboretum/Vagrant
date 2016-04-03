@@ -13,4 +13,4 @@ cat "$SQL_TMP_DIR"/*.sql
 # -- Latest updates
 cd "$DATABASE_DIRECTORY/"
 cat Updates/*.sql
-cat Updates/Custom_Data/*.sql
+cat Updates/Nostalrius/*.sql
