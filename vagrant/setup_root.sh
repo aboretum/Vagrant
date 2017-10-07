@@ -18,13 +18,26 @@ echo "---- FIXING POSSIBLE TIMEZONE PROBLEMS TO AVOID MAKE ERRORS"
 echo "$SYSTEM_TIMEZONE" | sudo tee /etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo apt-get update -qq
+sudo apt-get install -qq g++-6
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+g++   --version
+g++-6 --version
+
+sudo apt-get install -y libtbb-dev
+export TBB_ROOT_DIR=/usr/include/tbb/
+
+apt-get install -qq libace-dev
+export ACE_ROOT=/usr/include/ace/
+
 # Download sources/DB from github - do not overwrite existing ones
 cd /vagrant
 
-echo "---- CLONING (IF NEEDED) GIT REPOSITORIES"
-if [ ! -d "database" ]; then
-    git clone "$GIT_REPO_DATABASE" database
-fi
+#echo "---- CLONING (IF NEEDED) GIT REPOSITORIES"
+#if [ ! -d "database" ]; then
+#    git clone "$GIT_REPO_DATABASE" database
+#fi
 
 if [ ! -d "emulator" ]; then
     git clone "$GIT_REPO_CORE" emulator

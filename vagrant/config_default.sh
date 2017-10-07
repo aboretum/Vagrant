@@ -3,7 +3,7 @@ export HTTP_PROXY=""
 export HTTPS_PROXY=""
 
 export GIT_REPO_DATABASE="https://github.com/NostalriusTBC/Database.git"
-export GIT_REPO_CORE="https://github.com/aboretum/Core.git"
+export GIT_REPO_CORE="https://github.com/elysium-project/server.git"
 export GIT_REPO_SCRIPTS="https://github.com/NostalriusTBC/Scripts.git"
 export MYSQL_SERVER_ROOT_PASS="root"
 export INSTALL_PREFIX="/home/vagrant"
