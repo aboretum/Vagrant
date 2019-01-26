@@ -44,6 +44,6 @@ Vagrant.configure(2) do |config|
     v.name = "NostalriusTBC"
     v.cpus = 2 # Increase this if you have enough CPUs :)
     # Min recommended memory : 400 + 200*cpu MB
-    v.memory = 2048
+    v.memory = 4096
   end
 end
